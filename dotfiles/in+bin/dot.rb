@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'pathname'
 DF = Pathname('.dotty/default/dotfiles/dotfiles')
+HOME = Pathname(ENV['HOME'])
 
 def error_out(msg)
   puts msg
@@ -14,7 +15,8 @@ end
 def check_file(my_file)
   return my_file if my_file.file? && my_file.size?
   unless my_file.file?
-    skip "#{my_file} doesn't exist." return nil
+    skip "#{my_file} doesn't exist."
+    return nil
   end
   
   unless my_file.size?
@@ -56,6 +58,6 @@ ARGV.each { |f| do_checks(Pathname(f)) }
 
 all.compact.each do |file|
   puts "processing #{file}"
-  destination = DF + file.relative_path_from(ENV['HOME'])
-  
+  destination = DF + file.relative_path_from(HOME)
+  puts "destination: #{destination}"
 end
