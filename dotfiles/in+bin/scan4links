@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'hpricot'
+require 'open-uri'
+
+parent= Dir.pwd
+parent = parent + '/' unless parent.end_with?('/')
+doc = Hpricot(open(ARGV[0])) # open web page
+rows = doc.search("tr")
+rows.shift #get rid of initial
+rows.each do |row|
+  name = row.search("td").first.inner_html.match(/^[^(<]+/)[0].strip
+  path = parent + name
+  unless File.exists?(path) && File.directory?(path)
+    Dir.mkdir(parent + name)
+  end
+  links = row.search('a[@href]')
+  links.each do |raw_link|
+    link = raw_link['href']    
+    if link.start_with?('501files')
+      link = 'http://www.epa.gov/ttn/airs/airsaqs/detaildata/' + link
+    end
+    puts "wget --directory-prefix='#{name}' -w 5 -nc -- '#{link}'" 
+  end
+end

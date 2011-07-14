@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'uri'
+require 'cgi'
+my_url = CGI::parse(URI::parse(ARGV[0]).query)
+puts my_url
+file = URI::parse(my_url['url'][0]).path
+line = my_url['line'][0]
+puts "#{line}"
+exec "mine -l #{line} #{file}"
