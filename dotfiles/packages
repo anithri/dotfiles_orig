@@ -1,0 +1,5 @@
+sudo add-apt-repository ppa:pcf/miro-releases
+sudo add-apt-repository ppa:ferramroberto/java
+
+sudo apt-get install sun-java6-jdk sun-java6-jre default-jdk openjdk-6-jdk sun-java6-fonts ttf-kochi-gothic ttf-sazanami-gothic ttf-kochi-mincho ttf-sazanami-mincho ttf-arphic-uming libmyodbc odbc-postgresql tdsodbc unixodbc-bin zsh git vim curl build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev subversion python-xlib miro autojump
+
