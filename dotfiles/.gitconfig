@@ -1,0 +1,12 @@
+[user]
+        name = Scott M Parrish
+        email = anithri@gmail.com
+[core]
+        editor = vim
+[github]
+        token = 47c3deda897b4fd0f85ab8274ba7dcd0
+        user = anithri
+[color]
+  branch = auto
+  diff = auto
+  status = auto
