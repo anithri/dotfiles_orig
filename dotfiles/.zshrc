@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
-
+ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="anithri"
@@ -9,20 +8,30 @@ export ZSH_THEME="anithri"
 export CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
+# DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# export DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump command-not-found gem git git-flow bundler github ruby rvm thor rails)
+plugins=(autojump debian gem git git-flow github ruby rvm thor rails extract)
 
 source $ZSH/oh-my-zsh.sh
 [[ -s ~/.zsh.local ]] && source ~/.zsh.local
 # Customize to your needs...
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH=/home/scottp/.rvm/gems/ruby-1.9.2-p180@system/bin:/home/scottp/.rvm/gems/ruby-1.9.2-p180@global/bin:/home/scottp/.rvm/rubies/ruby-1.9.2-p180/bin:/home/scottp/.rvm/bin:/home/scottp/bin:/usr/local/src/bdsm-0.6.10/pkg/active/bin:/usr/local/bin:/usr/bin:/bin
+export PATH=/home/scottp/bin:/home/scottp/.rvm/gems/ruby-1.9.2-p180@system/bin:/home/scottp/.rvm/gems/ruby-1.9.2-p180@global/bin:/home/scottp/.rvm/rubies/ruby-1.9.2-p180/bin:/home/scottp/.rvm/bin:/home/scottp/bin:/usr/local/src/bdsm-0.6.10/pkg/active/bin:/usr/local/bin:/usr/bin:/bin
+alias revm="rvm use `rvm current`"
+alias guard="bundle exec guard"
+alias vim-update="vim +BundleInstall +qall"
+alias dotty="~/workspace/dotty/bin/dotty"
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
+export LESS='-i-P?f%f:stdin. ?m(%i/%m). Line %lb?L/%L(%Pb\%).'
+
+if [[ -s ~/.zshrc-private.gpg && ! -s ~/.zshrc-private ]]; then
+  ~/bin/decrypt_file ~/.zshrc-private.gpg
+fi
+[[ -s ~/.zshrc-private ]] && source ~/.zshrc-private

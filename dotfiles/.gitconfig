@@ -1,12 +1,15 @@
 [user]
-        name = Scott M Parrish
-        email = anithri@gmail.com
+  name = Scott M Parrish
+  email = anithri@gmail.com
 [core]
-        editor = vim
+  editor = vim
+  excludesfile = /home/scottp/.gitignore.global
 [github]
-        token = 47c3deda897b4fd0f85ab8274ba7dcd0
-        user = anithri
+  token = 47c3deda897b4fd0f85ab8274ba7dcd0
+  user = anithri
 [color]
   branch = auto
   diff = auto
   status = auto
+[merge]
+  tool = meld

@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+if [[ $# -ne 1 ]] ; then
+  echo usage: decrypt_file file_to_decrypt
+  return 1
+fi
+gpg -o $1:r -d $1

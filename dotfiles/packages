@@ -1,5 +1,5 @@
 sudo add-apt-repository ppa:pcf/miro-releases
 sudo add-apt-repository ppa:ferramroberto/java
-
-sudo apt-get install sun-java6-jdk sun-java6-jre default-jdk openjdk-6-jdk sun-java6-fonts ttf-kochi-gothic ttf-sazanami-gothic ttf-kochi-mincho ttf-sazanami-mincho ttf-arphic-uming libmyodbc odbc-postgresql tdsodbc unixodbc-bin zsh git vim curl build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev subversion python-xlib miro autojump
-
+sudo add-apt-repository ppa:lkjoel/fix404
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get install autoconf autojump bison bluetile compizconfig-settings-manager compiz-plugins-extra conky conky-all curl dconf-tools default-jdk fix404 gcolor2 git git-all git-cola git-core gnome-core google-chrome-stable grub2 grub2-splashimages launchpad-getkeys ldap-auth-client ldap-auth-config libldap2-dev libmyodbc libmysqlclient-dev libncurses5-dev libreadline6-dev libsasl2-dev libsqlite3-dev libssl-dev libxml2-dev libxslt1-dev libyaml-dev miro mysql-client nautilus-dropbox nvidia-current odbc-postgresql openjdk-6-jdk pithos plymouth-theme-ugr-text python-xlib samba smbfs sqlite3 ssh startupmanager subversion sun-java6-fonts sun-java6-jdk sun-java6-jre tdsodbc terminator ttf-arphic-uming ttf-kochi-gothic ttf-kochi-mincho ttf-sazanami-gothic ttf-sazanami-mincho ugr-count unixodbc-bin vim vim-gnome xchat zlib1g-dev zsh

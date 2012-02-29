@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+if [[ $# -ne 1 ]] ; then
+  echo usage: encrypt_file file_to_encrypt
+  return 1
+fi
+
+gpg -r `whoami` -e $1
+
