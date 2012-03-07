@@ -1,4 +1,5 @@
 # Path to your oh-my-zsh configuration.
+export TERM=xterm-256color
 ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -18,7 +19,7 @@ export CASE_SENSITIVE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump debian gem git git-flow github ruby rvm thor rails extract)
+plugins=(autojump debian gem git git-flow github ruby rvm thor rails extract vundle)
 
 source $ZSH/oh-my-zsh.sh
 [[ -s ~/.zsh.local ]] && source ~/.zsh.local
