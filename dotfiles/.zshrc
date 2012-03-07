@@ -35,3 +35,16 @@ if [[ -s ~/.zshrc-private.gpg && ! -s ~/.zshrc-private ]]; then
   ~/bin/decrypt_file ~/.zshrc-private.gpg
 fi
 [[ -s ~/.zshrc-private ]] && source ~/.zshrc-private
+
+show_random_alias() {
+  saveIFS=$IFS
+  IFS=$'\n'
+  all_aliases=($(alias))
+  echo $all_aliases[$RANDOM%$#all_aliases+1]
+  IFS=$saveIFS
+}
+echo "************Learn your aliases************"
+for i in {1..5}; do show_random_alias; done; 
+echo
+echo
+

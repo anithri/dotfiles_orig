@@ -11,6 +11,8 @@ Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'bsl/obviousmode'
 Bundle 'tpope/vim-surround'
+Bundle 'godlygeek/tabular'
+
 syntax on
 filetype plugin on
 filetype plugin indent on
