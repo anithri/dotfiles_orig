@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
 export TERM=xterm-256color
+export EDITOR=vim
 ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -30,7 +31,9 @@ alias guard="bundle exec guard"
 alias vim-update="vim +BundleInstall +qall"
 alias dotty="~/workspace/dotty/bin/dotty"
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
-export LESS='-i-P?f%f:stdin. ?m(%i/%m). Line %lb?L/%L(%Pb\%).'
+export LESS='-R-i-P?f%f:stdin. ?m(%i/%m). Line %lb?L/%L(%Pb\%).'
+
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 if [[ -s ~/.zshrc-private.gpg && ! -s ~/.zshrc-private ]]; then
   ~/bin/decrypt_file ~/.zshrc-private.gpg
