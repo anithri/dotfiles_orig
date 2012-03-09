@@ -1,6 +1,7 @@
 # load libraries
 require 'rubygems' unless defined? Gem
 require 'irbtools'
+require 'interactive_editor'
 
 # method the return the methods not present on basic objects, good for
 # investigations
@@ -45,3 +46,4 @@ end
 Hirb.enable output: { "Project" => {options: {fields: %w{id name state}}},
                       "User" => {options: {fields: %w{id login}}}
 }
+
