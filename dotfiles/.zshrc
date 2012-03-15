@@ -23,6 +23,7 @@ export CASE_SENSITIVE="true"
 plugins=(autojump debian gem git git-flow github ruby rvm thor rails extract vundle)
 
 source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
 [[ -s ~/.zsh.local ]] && source ~/.zsh.local
 # Customize to your needs...
 export PATH=/home/scottp/bin:/home/scottp/.rvm/gems/ruby-1.9.2-p180@system/bin:/home/scottp/.rvm/gems/ruby-1.9.2-p180@global/bin:/home/scottp/.rvm/rubies/ruby-1.9.2-p180/bin:/home/scottp/.rvm/bin:/home/scottp/bin:/usr/local/src/bdsm-0.6.10/pkg/active/bin:/usr/local/bin:/usr/bin:/bin
