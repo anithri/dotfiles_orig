@@ -20,7 +20,7 @@ export CASE_SENSITIVE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump debian gem git git-flow github ruby rvm thor rails extract vundle)
+plugins=(autojump debian gem bundler git git-flow github ruby3 extract vundle)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all

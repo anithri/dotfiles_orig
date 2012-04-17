@@ -43,7 +43,7 @@ def dev
   $LOAD_PATH.unshift(Dir.pwd + '/lib') unless $LOAD_PATH.include?(Dir.pwd + '/lib')
 end
 
-Hirb.enable output: { "Project" => {options: {fields: %w{id name state}}},
-                      "User" => {options: {fields: %w{id login}}}
+Hirb.enable output => { "Project" => {:options => {:fields => %w{id name state}}},
+                      "User" => {:options => {:fields => %w{id login}}}
 }
 
