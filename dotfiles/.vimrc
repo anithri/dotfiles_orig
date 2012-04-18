@@ -12,7 +12,6 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'bsl/obviousmode'
 Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
-Bundle 'altercation/vim-colors-solarized'
 
 set nocompatible
 set hidden
@@ -68,7 +67,6 @@ augroup end
 
 :set t_Co=256
 :set background=dark
-:color solarized
 
 function! InsertTabWrapper()
     let col = col('.') - 1
