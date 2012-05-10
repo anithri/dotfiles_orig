@@ -31,6 +31,7 @@ alias revm="rvm use `rvm current`"
 alias guard="bundle exec guard"
 alias vim-update="vim +BundleInstall +qall"
 alias dotty="~/workspace/dotty/bin/dotty"
+alias pc2="cd ~/workspace;revm;cd pc2" 
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
 export LESS='-R-i-P?f%f:stdin. ?m(%i/%m). Line %lb?L/%L(%Pb\%).'
 
@@ -53,3 +54,4 @@ for i in {1..5}; do show_random_alias; done;
 echo
 echo
 
+pc2='cd ~/workspace;revm;cd pc2'

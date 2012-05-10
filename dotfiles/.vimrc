@@ -12,6 +12,8 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'bsl/obviousmode'
 Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-rails'
 
 set nocompatible
 set hidden
