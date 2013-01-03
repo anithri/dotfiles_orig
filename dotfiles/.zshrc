@@ -54,3 +54,4 @@ for i in {1..5}; do show_random_alias; done;
 echo
 echo
 
+pc2='cd ~/workspace;revm;cd pc2'
