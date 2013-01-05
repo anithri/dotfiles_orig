@@ -1,0 +1,15 @@
+SRC="${rvm_path}/rubies/default"
+echo "SRC: ${SRC}"
+ 
+GEMS=`rvm gemdir`/gems
+echo "GEMS: ${GEMS}"
+ 
+DEST=~/.vimtags
+echo "DEST: ${DEST}"
+
+ctags \
+ --exclude=.git \
+ --exclude=tags \
+ --exclude=logs \
+ --exclude=doc \
+ -R -f $DEST $SRC $GEMS

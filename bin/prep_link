@@ -1,0 +1,9 @@
+#!/usr/bin/zsh
+
+if [ $# -ne 2 ]; then
+  echo "Usage: `basename $0` file dir"
+  exit 65
+fi
+FILENAME=$1
+FILE=${FILENAME#.}
+git mv $FILENAME $2/$FILE.symlink
