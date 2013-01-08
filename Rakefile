@@ -2,7 +2,7 @@ require 'rake'
 
 desc "Hook our dotfiles into system-standard positions."
 task :install do
-  linkables = Dir.glob('*/**{.symlink}')
+  linkables = Dir.glob('*/**/*{.symlink}')
 
   skip_all = false
   overwrite_all = false
@@ -32,6 +32,27 @@ task :install do
     end
     `ln -s "$PWD/#{linkable}" "#{target}"` if !skip_all
   end
+
+  #link folders here
+  folders = [
+    ["bin"],
+    ["zsh/prezto.repo",".zprezto"],
+    ["vim/spf13-vim.repo/.vim",".vim"],
+    ["vim/spf13-vim.repo/.vim/.vimrc.bundles.fork",".vimrc.bundles.fork"],
+    ["Tools/tmux-powerline.repo"],
+    ["Tools/gitflow.repo"],
+    ["Tools/rvm-patchsets.repo"]
+  ]
+  folders.each do |dir_info|
+    orig = dir_info[0]
+    target = "#{ENV["HOME"]}/#{dir_info[-1].chomp(".repo")}"
+    if File.exists?(target) || File.symlink?(target)
+      puts "skipping #{target}"
+    else
+      `ln -s "$PWD/#{orig}" "#{target}"`
+    end
+  end
+
 end
 
 task :uninstall do

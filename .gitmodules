@@ -1,0 +1,15 @@
+[submodule "zsh/prezto.repo"]
+	path = zsh/prezto.repo
+	url = git@github.com:anithri/prezto.git
+[submodule "vim/spf13-vim.repo"]
+	path = vim/spf13-vim.repo
+	url = git@github.com:anithri/spf13-vim.git
+[submodule "Tools/rvm-patchsets.repo"]
+	path = Tools/rvm-patchsets.repo
+	url = https://github.com/skaes/rvm-patchsets.git
+[submodule "Tools/gitflow.repo"]
+	path = Tools/gitflow.repo
+	url = http://github.com/nvie/gitflow.git
+[submodule "Tools/tmux-powerline.repo"]
+	path = Tools/tmux-powerline.repo
+	url = git@github.com:anithri/tmux-powerline.git
