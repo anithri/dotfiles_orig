@@ -13,3 +13,11 @@
   status = auto
 [merge]
   tool = meld
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 700x550+693+231
+	history-view-vpane-position = 336
+	main-window-view = HistoryView
+	file-view-vpane-position = 1067
+[push]
+	default = simple
