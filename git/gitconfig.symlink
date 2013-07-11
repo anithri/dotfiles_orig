@@ -1,6 +1,6 @@
 [user]
-  name = Scott M Parrish
-  email = anithri@gmail.com
+	name = Scott M Parrish
+	email = anithri@gmail.com
 [core]
   editor = vim
   excludesfile = /home/scottp/.gitignore.global
